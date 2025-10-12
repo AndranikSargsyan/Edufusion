@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edufusion"
+version = "0.1.0"
+description = "DIY implementation of Stable Diffusion 1.5 with minimal dependencies."
+readme = "README.md"
+requires-python = ">=3.6"
+license = {text = "MIT"}
+authors = [
+    {name = "Andranik Sargsyan", email = "and.sargsyan@yahoo.com"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "ftfy==6.3.0",
+    "regex==2024.9.11",
+    "torch>=2.0.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

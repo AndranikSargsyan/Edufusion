@@ -6,6 +6,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+from torch.utils.checkpoint import checkpoint
+
 
 def timestep_embedding(timesteps: torch.IntTensor, dim, max_period: int = 10000) -> torch.FloatTensor:
     """
