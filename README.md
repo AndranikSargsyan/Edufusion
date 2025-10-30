@@ -42,12 +42,12 @@ Basic usage:
 from edufusion import StableDiffusion
 
 sd = StableDiffusion()
-image = sd.sample_ddim(
+out = sd.sample_ddim(
     prompt="A dog sitting in the park",
     num_steps=50,
     seed=42
 )
-image.save("output.png")
+out.image.save("output.png")
 ```
 
 ## Component-Level Usage

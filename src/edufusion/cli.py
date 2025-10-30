@@ -22,7 +22,7 @@ def main():
 
     sd = StableDiffusion()
     
-    output_image = sd.sample_ddim(
+    out = sd.sample_ddim(
         prompt=args.prompt,
         negative_prompt=args.negative_prompt,
         num_steps=args.num_steps,
@@ -32,7 +32,7 @@ def main():
         seed=args.seed,
         verbose=args.verbose
     )
-    output_image.save("output.png")
+    out.image.save("output.png")
 
 
 if __name__ == "__main__":
